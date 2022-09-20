@@ -5,18 +5,21 @@
 </div>
 <hr/>
 <div class="row">
-    <div class="col-xs-12 list-group">
-        <a href="#" class="list-group-item d-flex" *ngFor="let recipe of recipes">
-            <div class="ms-auto">
+    <div class="col-xs-12">
+        <div class="list-group">
+        <div class="list-group-item" *ngFor="let recipe of recipes">  
+        <a href="#" class="d-flex">
+        <div>
             <h4 > Recipe Name {{recipe.name}}   </h4>
             <p > Description {{recipe.description}}</p>
         </div>
-        <span>
+        <span class="ms-auto">
             <img [src]="recipe.imagePath" alt="" class="recipe-image" />
         </span>
         </a>
-        
-        <app-recipe-item *ngFor="let recipe of recipes">recipe</app-recipe-item>
+        </div> 
+        <!-- <app-recipe-item *ngFor="let recipe of recipes">recipe</app-recipe-item> -->
+    </div>
     </div>
 </div>
 
