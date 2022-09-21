@@ -1,1 +1,11 @@
-<h2>item</h2>
+<div class="list-group-item">  
+    <a href="#" class="d-flex" (click)="onSelected()">
+    <div>
+        <h4 > Recipe Name {{recipe.name}}   </h4>
+        <p > Description {{recipe.description}}</p>
+    </div>
+    <span class="ms-auto">
+        <img [src]="recipe.imagePath" alt="" class="recipe-image" />
+    </span>
+    </a>
+    </div> 

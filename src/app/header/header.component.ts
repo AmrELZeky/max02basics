@@ -1,15 +1,19 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output,EventEmitter } from '@angular/core';
+
 
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
-  styleUrls: ['./header.component.sass']
+  styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
-
+@Output() selectedNavLink=new EventEmitter<string>();
   constructor() { }
 
   ngOnInit(): void {
+  }
+  onChangeNav(selectedLink:string){
+   this.selectedNavLink.emit(selectedLink);
   }
 
 }
